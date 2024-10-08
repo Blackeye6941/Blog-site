@@ -1,8 +1,9 @@
+import Logincard from "@/components/logincard/Logincard"
 
 const Login = () => {
   return (
     <div>
-      Login Page
+      <Logincard/>
     </div>
   )
 }
