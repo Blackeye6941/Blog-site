@@ -52,7 +52,7 @@ const Links = () => {
     <button className="pl-[50px]" onClick={() => setOpen(!open)}>
         Menu
       </button>
-      {open && <div className="flex flex-col absolute bg-slate-500 w-[25%] pt-[60px] gap-[50px] items-end h-[95vh] bg-opacity-20">
+      {open && <div className="flex flex-col absolute bg-slate-500 w-[25%] max-md:w-[15%] pt-[60px] gap-[50px] items-end h-[95vh] bg-opacity-20">
       {links.map((link =>(
         <NavLink link={link} key={link.title}/>
       )))}
