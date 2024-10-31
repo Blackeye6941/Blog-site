@@ -2,7 +2,7 @@
 const Aboutpage = () => {
   return (
     <>
-      <div className=" transition translate-y-[-20%]">
+      <div className=" transition translate-y-[-40%]">
         <p className="text-[30px] mt-[100px] text-center text-white">About Us</p>
         <div className="text-10 pt-10 text-white px-4">
           <h2 className="font-bold">Our Mission</h2>
