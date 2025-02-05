@@ -10,7 +10,7 @@ const NavLink = ({link}) => {
 
   return (
     <div>
-      <Link href={link.path} className={isActive?"bg-white rounded-xl text-black px-2 py-1 min-w-[100px] transition  ease-in 0.8s":"hover:text-slate-500"}>{link.title}</Link>
+      <Link href={link.path} className={isActive?"bg-white rounded-xl text-black px-2 py-1 min-w-[100px] transition  ease-in 0.8s":"hover:text-slate-500"} prefetch={false}>{link.title}</Link>
     </div>
   )
 }

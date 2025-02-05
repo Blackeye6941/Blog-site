@@ -1,6 +1,13 @@
+import { getPost } from "@/components/navbar/links/navlink/lib/data";
+import User from "@/components/userfetch/User";
 import Image from "next/image"
 
-const SingleBlogPage = () => {
+const SingleBlogPage = async ({params}) => {
+
+  const { slug } = params;
+  //console.log(params);
+  const post = await getPost(slug);
+
   return (
     <>
       <div className="flex gap-2 lg:gap-[40px] xl:gap-[50px] flex-col sm:flex-row">
@@ -8,18 +15,17 @@ const SingleBlogPage = () => {
           <Image src="/image1.jpg" alt="" fill className="object-cover"/>
         </div>
         <div className="flex-2">
-          <h1 className="text-[45px]">Title</h1>
+          <h1 className="text-[45px]">{post.title}</h1>
           <div className="flex flex-col gap-3 text-[20px] border-b-2">
           <div className="flex flex-row gap-10">
             <span>Author</span>
             <span>Date</span>
           </div>
           <div className="flex flex-row gap-10">
-            <span>Michel</span>
-            <span>22.12.2005</span>
+            <User userId={post.userId}/>
           </div>
           </div>
-          <p className="pt-8  text-[14px] ">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, temporibus illum mollitia facilis eius dolorum odit laborum, architecto consequuntur iusto doloribus aliquid dicta iste soluta. Aperiam illum cumque iusto reiciendis?</p>
+          <p className="pt-8  text-[14px] ">{post.body}</p>
         </div>
       </div>
     </>
