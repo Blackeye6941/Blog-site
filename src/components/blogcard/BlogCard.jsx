@@ -14,7 +14,7 @@ const BlogCard = ({post}) => {
             <div className="">
                 <h1 className="text-[20px]">{post.title}</h1>
             <p>{post.body}</p>
-            <Link href={`/blog/${post.id}`} className="text-blue-600 underline">Read more.....</Link>
+            <Link href={`/blog/${post.slug}`} className="text-blue-600 underline">Read more.....</Link>
             </div>
         </div>
     </>

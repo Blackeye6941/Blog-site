@@ -1,5 +1,6 @@
-import { getPost } from "@/components/navbar/links/navlink/lib/data";
+//import { getPost } from "@/components/navbar/links/navlink/lib/data";
 import User from "@/components/userfetch/User";
+import { getPost } from "@/lib/data";
 import Image from "next/image"
 
 const SingleBlogPage = async ({params}) => {

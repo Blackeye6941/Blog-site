@@ -1,5 +1,6 @@
 import BlogCard from "@/components/blogcard/BlogCard"
-import { getPosts } from "@/components/navbar/links/navlink/lib/data"
+import { getPosts } from "@/lib/data";
+//import { getPosts } from "@/components/navbar/links/navlink/lib/data"
 
 const BlogPage = async () => {
   const posts =  await getPosts();
