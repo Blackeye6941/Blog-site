@@ -24,6 +24,7 @@ const SingleBlogPage = async ({params}) => {
           </div>
           <div className="flex flex-row gap-10">
             <User userId={post.userId}/>
+            {console.log(post.userId)}
           </div>
           </div>
           <p className="pt-8  text-[14px] ">{post.body}</p>
