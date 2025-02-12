@@ -52,7 +52,7 @@ const Links = () => {
     <button className="pl-[50px]" onClick={() => setOpen(!open)}>
         Menu
       </button>
-      {open && <div className="fixed top-0 right-0 bg-gray-900 h-[100vh] w-[250px] z-[999px] bg-transparent backdrop-brightness-50 translate-y-12">
+      {open && <div className="fixed top-0 right-0 bg-black h-[100vh] w-[220px] z-[999px] bg-transparent backdrop-blur-xl translate-y-12 py-3">
       {links.map((link =>(
         <NavLink link={link} key={link.title}/>
       )))}
@@ -60,7 +60,7 @@ const Links = () => {
         session ? (
             <>
             {isAdmin && <NavLink link={{title:"Admin", path:"/admin"}}/>}
-            <button className="hover:text-slate-500">Logout</button>
+            <button className="hover:text-slate-500 translate-x-[85px] py-5">Logout</button>
             </>
         ):(
             <NavLink link={{title:"Login", path:"/login"}}/>
